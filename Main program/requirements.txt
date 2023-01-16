@@ -1,0 +1,13 @@
+Flask
+line-bot-sdk
+google-cloud-vision
+SpeechRecognition
+pydub
+matplotlib
+fuzzywuzzy
+mysql.connector
+flask_sqlalchemy
+psycopg2-binary
+opencv-python==4.4.0.44
+uwsgi
+

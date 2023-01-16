@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>刪除卡片</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row" style="margin: 10px">
+        <div class="col-12" style="margin: 10px">
+            <label>卡片名稱</label>
+            <select id="sel_type" class="form-control">
+                <option selected>★★中國信託★★</option>
+                <option>中國信託linepay卡</option>
+                <option>中國信託中油聯名卡</option>
+                <option>中國信託allme卡</option>
+                <option>中國信託yahoo聯名卡</option>
+                <option>中國信託商旅鈦金卡</option>
+                <option>★★國泰世華★★</option>
+                <option>國泰世華cube卡</option>
+                <option>國泰世華蝦皮購物聯名卡</option>
+                <option>國泰世華國泰現金回饋御璽卡</option>
+                <option>國泰世華台塑聯名卡</option>
+                <option>★★台北富邦★★</option>
+                <option>台北富邦jpoints卡</option>
+                <option>台北富邦momo卡</option>
+                <option>台北富邦ju卡</option>
+                <option>台北富邦鑽保卡</option>
+                <option>台北富邦數位生活卡</option>
+                <option>台北富邦openpossible聯名卡</option>
+                <option>★★上海銀行★★</option>
+                <option>上海銀行小小兵回饋卡</option>
+                <option>上海銀行visa簡單卡</option>
+                <option>上海銀行小小兵分期卡</option>
+                <option>上海銀行teresacard悠遊極緻卡</option>
+                <option>★★土地銀行★★</option>
+                <option>土地銀行icash2.0聯名鈦金卡</option>
+                <option>土地銀行極緻卡</option>
+                <option>★★元大銀行★★</option>
+                <option>元大銀行鑽金一卡通聯名卡</option>
+                <option>元大銀行鑽金智富icash聯名卡</option>
+                <option>元大銀行元大證券icash聯名卡</option>
+                <option>元大銀行世界卡</option>
+                <option>★★王道銀行★★</option>
+                <option>王道銀行低碳生活卡</option>
+                <option>王道銀行funnow聯名卡</option>
+                <option>王道銀行camacafevisa聯名卡</option>
+                <option>★★台中銀行★★</option>
+                <option>台中銀行mysense悠遊御璽卡</option>
+                <option>台中銀行台中jcb哆啦a夢晶緻卡</option>
+                <option>台中銀行台中jcb悠遊加油晶緻卡</option>
+                <option>★★台新銀行★★</option>
+                <option>台新銀行玫瑰giving卡</option>
+                <option>台新銀行flygo卡</option>
+                <option>台新銀行街口聯名卡</option>
+                <option>台新銀行太陽卡</option>
+                <option>台新銀行旺卡</option>
+                <option>台新銀行gogo悠遊御璽卡</option>
+                <option>★★台灣企銀★★</option>
+                <option>台灣企銀永續生活悠遊卡</option>
+                <option>台灣企銀永續生活一卡通</option>
+                <option>台灣企銀藝fun悠遊御璽卡</option>
+                <option>台灣企銀銀色之愛卡</option>
+                <option>台灣企銀宜蘭悠遊認同卡</option>
+                <option>★★台灣樂天★★</option>
+                <option>台灣樂天台灣樂天信用卡</option>
+                <option>台灣樂天樂虎卡</option>
+                <option>台灣樂天樂天桃猿聯名卡</option>
+                <option>★★永豐銀行★★</option>
+                <option>永豐銀行dawho現金回饋信用卡</option>
+                <option>永豐銀行sport卡</option>
+                <option>永豐銀行現金回饋卡</option>
+                <option>永豐銀行55688聯名卡</option>
+                <option>永豐銀行幣倍卡</option>
+                <option>★★玉山銀行★★</option>
+                <option>玉山銀行pi拍錢包信用卡</option>
+                <option>玉山銀行家樂福悠遊聯名卡</option>
+                <option>玉山銀行數位e卡輕時尚版</option>
+                <option>玉山銀行數位e卡寵生活版</option>
+                <option>玉山銀行ubear信用卡</option>
+                <option>★★兆豐銀行★★</option>
+                <option>兆豐銀行宇宙明星bt21信用卡</option>
+                <option>兆豐銀行e秒刷鈦金卡</option>
+                <option>兆豐銀行megaone一卡通聯名卡</option>
+                <option>兆豐銀行利多御璽卡</option>
+                <option>兆豐銀行gogoro聯名卡</option>
+                <option>★★合作金庫★★</option>
+                <option>合作金庫卡娜赫拉悠遊聯名卡環保綠</option>
+                <option>合作金庫i享樂生活卡</option>
+                <option>合作金庫i運動卡</option>
+                <option>合作金庫樂活卡</option>
+                <option>合作金庫卡娜赫拉icash聯名卡夢想藍</option>
+                <option>★★安泰銀行★★</option>
+                <option>安泰銀行悠遊分期卡</option>
+                <option>安泰銀行悠遊鈦金卡</option>
+                <option>安泰銀行安泰jcb晶緻卡</option>
+                <option>★★花旗銀行★★</option>
+                <option>花旗銀行花旗現金回饋plus鈦金卡</option>
+                <option>花旗銀行饗樂生活卡</option>
+                <option>花旗銀行pchomeprime聯名卡</option>
+                <option>★★星展銀行★★</option>
+                <option>星展銀行eco永續卡</option>
+                <option>星展銀行飛行世界商務卡</option>
+                <option>★★美國運通★★</option>
+                <option>美國運通信用白金卡</option>
+                <option>★★高雄銀行★★</option>
+                <option>高雄銀行高雄going鈦金卡</option>
+                <option>★★將來銀行★★</option>
+                <option>將來銀行visa簽帳金融卡</option>
+                <option>★★第一銀行★★</option>
+                <option>第一銀行ileo信用卡</option>
+                <option>第一銀行livinggreen綠活卡</option>
+                <option>第一銀行義享天地聯名卡</option>
+                <option>第一銀行icash聯名卡</option>
+                <option>第一銀行一卡通聯名卡</option>
+                <option>★★凱基銀行★★</option>
+                <option>凱基銀行魔buy悠遊鈦金卡</option>
+                <option>凱基銀行魔fun悠遊御璽卡</option>
+                <option>凱基銀行現金回饋悠遊御璽卡</option>
+                <option>★★渣打銀行★★</option>
+                <option>渣打銀行渣打現金回饋御璽卡</option>
+                <option>渣打銀行theshoppingcard分期卡</option>
+                <option>渣打銀行優先理財無限卡</option>
+                <option>★★華南銀行★★</option>
+                <option>華南銀行sny信用卡</option>
+                <option>華南銀行i網購生活卡</option>
+                <option>華南銀行超鑽現金回饋卡</option>
+                <option>華南銀行openpoint超級點數聯名卡</option>
+                <option>華南銀行嘟嘟房聯名卡</option>
+                <option>★★華泰商銀★★</option>
+                <option>華泰商銀華泰jcb晶緻卡</option>
+                <option>★★陽信銀行★★</option>
+                <option>陽信銀行陽信jcb哆啦a夢晶緻卡</option>
+                <option>陽信銀行mastercard一卡通聯名鈦金卡</option>
+                <option>陽信銀行悠遊visa金融卡</option>
+                <option>陽信銀行visa曜晶卡</option>
+                <option>★★新光銀行★★</option>
+                <option>新光銀行ou點點卡</option>
+                <option>新光銀行寰宇現金回饋卡</option>
+                <option>新光銀行悠遊聯名晶緻卡</option>
+                <option>新光銀行分期7卡</option>
+                <option>新光銀行新光無限卡</option>
+                <option>★★滙豐銀行★★</option>
+                <option>滙豐銀行滙豐現金回饋御璽卡</option>
+                <option>滙豐銀行匯鑽卡</option>
+                <option>★★彰化銀行★★</option>
+                <option>彰化銀行my購卡</option>
+                <option>彰化銀行my樂現金回饋卡</option>
+                <option>彰化銀行jcb哆啦a夢悠遊晶緻卡</option>
+                <option>★★臺灣銀行★★</option>
+                <option>臺灣銀行一卡通鈦金商旅卡</option>
+                <option>臺灣銀行一卡通導盲犬認同卡</option>
+                <option>臺灣銀行祝福認同卡</option>
+                <option>★★遠東商銀★★</option>
+                <option>遠東商銀遠東樂家卡</option>
+                <option>遠東商銀快樂信用卡悠遊</option>
+                <option>遠東商銀bankee信用卡</option>
+                <option>遠東商銀cestmoi旅遊悠遊卡</option>
+                <option>★★聯邦銀行★★</option>
+                <option>聯邦銀行賴點一卡通御璽卡</option>
+                <option>聯邦銀行jcb吉鶴卡</option>
+                <option>聯邦銀行綠卡</option>
+                <option>聯邦銀行幸福m卡</option>
+                <option>聯邦銀行微風悠遊聯名卡</option>
+                <option>★★LINE Bank★★</option>
+                <option>LINE Bank簽帳金融卡</option>
+                <option>★★日盛銀行★★</option>
+                <option>日盛銀行allpass卡</option>
+                <option>日盛銀行日盛無限卡</option>
+            </select>
+            <button class="btn btn-success btn-block" id="btn_reserve">確定</button>
+        </div>
+        <div id="error_msg"></div>
+    </div>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+	<script>
+        function initializeLiff(myLiffId) {
+            liff.init({liffId: myLiffId });
+        }
+
+        var reserve = async (type) => {
+            if (type == '' ) {  //資料檢查
+                alert('所有欄位都要填寫！');
+                return;
+            }
+            var msg = "@";  //回傳訊息字串
+            msg = msg + type + "/";
+			await liff.sendMessages([  //推播訊息
+				{ type: 'text',
+				  text: msg
+				}
+			])
+			liff.closeWindow();  //關閉視窗
+		}
+
+		function recordErrMessage(msg) {
+		    var error_msg = document.getElementById('error_msg');
+		    error_msg.innerText = msg;
+		}
+
+		window.onload = () => {
+		    console.log("load");
+
+            var liffId = '{{ liffid }}';
+		    initializeLiff(liffId);
+
+		    var btn_reserve = document.getElementById('btn_reserve');
+            btn_reserve.addEventListener('click', async () => {
+                try {
+                    var sel_type = document.getElementById('sel_type');
+                    // var txb_amount = document.getElementById('txb_amount');
+                    // var in_datetime = document.getElementById('in_datetime');
+                    // var out_datetime = document.getElementById('out_datetime');
+
+                    await reserve(
+                        sel_type.value,
+                        // txb_amount.value,
+                        // in_datetime.value,
+                        // out_datetime.value,
+                    );
+                } catch (e) {
+                    recordErrMessage(e.toString());
+                }
+            });
+
+		}
+
+	</script>
+</body>
+</html>
